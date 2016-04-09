@@ -93,8 +93,9 @@ def print_indexes(my_list):
         2 Volvo
 
     """
-
-    print "Nothing at all"
+    #  Iterate through list and print the index of the element and the element.
+    for item in my_list:
+        print my_list.index(item), item
 
 
 def long_words(word_list):
