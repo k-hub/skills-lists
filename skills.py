@@ -264,7 +264,7 @@ def mult_numbers(number_list):
         1
 
     """
-    product = 1  # Initialize product to 1
+    product = 1  # Bind identifier to 1.
 
     for num in number_list:
             product *= num  # Multiply product by num from input list.
@@ -287,8 +287,12 @@ def join_strings(word_list):
         ''
 
     """
+    join_words = ''  # Bind identifier to empty string.
 
-    return "Not the right thing"
+    for word in word_list:
+        join_words += word  # Concatenate string to join_words.
+
+    return join_words
 
 
 def average(number_list):
