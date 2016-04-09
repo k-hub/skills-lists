@@ -69,7 +69,7 @@ def every_other_item(my_list):
        ['you', 'are', 'good', 'at', 'coding']
 
     """
-    every_other_item_list = my_list[::2]  # Slice input list from start index to last index and give back every other number then bind resulting list to an identifier.
+    every_other_item_list = my_list[::2]  # From the beginning of the list to the end, give back every other number then bind resulting list to an identifier.
 
     return every_other_item_list
 
@@ -373,8 +373,9 @@ def reverse_list(my_list):
         ['I', 'love', 'cookies']
 
     """
-
-    return []
+    # From the first element to the last element of input list, return the list in reverse order.
+    reversed_list = my_list[::-1]
+    return reversed_list
 
 
 def reverse_list_in_place(my_list):
