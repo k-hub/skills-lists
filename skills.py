@@ -238,8 +238,12 @@ def sum_numbers(number_list):
         0
 
     """
+    total = 0  # Initialize total count.
 
-    return None
+    for num in number_list:
+        total += num  # Increment total by num from input list.
+
+    return total
 
 
 def mult_numbers(number_list):
