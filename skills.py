@@ -34,7 +34,7 @@ def all_odd(number_list):
 
     for num in number_list:
         if num % 2 != 0:  # num % 2 == 0 is true for all even numbers. If num % 2 is not 0 then the number must be odd.
-            odd_nums.append(num)  # Append all numbers to list that meet the condition on line 36.
+            odd_nums.append(num)  # Append all numbers to the list that meet the condition on line 36.
 
     return odd_nums  # Return the list.
 
@@ -53,7 +53,7 @@ def all_even(number_list):
 
     for num in number_list:
         if num % 2 == 0:  # If the num divided by 2 has a remainder of 0, then it must be an even number.
-            even_nums.append(num)  # Append all even numbers to list.
+            even_nums.append(num)  # Append all even numbers to the list.
 
     return even_nums  # Return the list.
 
@@ -126,8 +126,13 @@ def n_long_words(word_list, n):
     >>> n_long_words(["I", "like", "apples", "bananas", "you"], 5)
     ['apples', 'bananas']
     """
+    n_long_words_list = []  # Create an empty list that will store words longer than n characters.
 
-    return ['the wrong thing']
+    for word in word_list:  # If length of word in input list is longer than the n argument, then append word to the list.
+        if len(word) > n:
+            n_long_words_list.append(word)
+
+    return n_long_words_list
 
 
 def smallest_int(number_list):
