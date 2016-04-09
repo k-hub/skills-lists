@@ -30,13 +30,13 @@ def all_odd(number_list):
         []
 
     """
-    odd_nums = []  # Create an empty list that will be used to store all odd numbers
+    odd_nums = []  # Create an empty list that will be used to store all odd numbers.
 
     for num in number_list:
         if num % 2 != 0:  # num % 2 == 0 is true for all even numbers. If num % 2 is not 0 then the number must be odd.
             odd_nums.append(num)  # Append all numbers to list that meet the condition on line 36.
 
-    return odd_nums
+    return odd_nums  # Return the list.
 
 
 def all_even(number_list):
@@ -49,8 +49,13 @@ def all_even(number_list):
         []
 
     """
+    even_nums = []  # Create an empty list that will be used to store all even numbers.
 
-    return ['the wrong thing']
+    for num in number_list:
+        if num % 2 == 0:  # If the num divided by 2 has a remainder of 0, then it must be an even number.
+            even_nums.append(num)  # Append all even numbers to list.
+
+    return even_nums  # Return the list.
 
 
 def every_other_item(my_list):
