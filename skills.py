@@ -264,8 +264,12 @@ def mult_numbers(number_list):
         1
 
     """
+    product = 1  # Initialize product to 1
 
-    return None
+    for num in number_list:
+            product *= num  # Multiply product by num from input list.
+
+    return product
 
 
 def join_strings(word_list):
