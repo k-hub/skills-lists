@@ -215,8 +215,12 @@ def word_lengths(word_list):
         [5, 3, 5, 4]
 
     """
+    len_list = []  # Create an empty list that will store the length of the words from input list.
 
-    return []
+    for word in word_list:
+        len_list.append(len(word))  # Append the length of word to list.
+
+    return len_list
 
 
 def sum_numbers(number_list):
