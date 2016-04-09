@@ -15,7 +15,7 @@ def print_list(my_list):
         9
 
     """
-    # Iterate through the input list and print each item
+    # Iterate through the input list and print each item.
     for item in my_list:
         print item
 
@@ -93,7 +93,7 @@ def print_indexes(my_list):
         2 Volvo
 
     """
-    #  Iterate through list and print the index of the element and the element.
+    #  Iterate through list and print the index of the element and the respective element.
     for item in my_list:
         print my_list.index(item), item
 
@@ -108,8 +108,13 @@ def long_words(word_list):
         []
 
     """
+    long_words_list = []  # Create an empty list to store words that have more than 4 characters.
 
-    return ['the wrong thing']
+    for word in word_list:
+        if len(word) > 4:  # If the length of the word is more than 4 characters, then append the word to the list.
+            long_words_list.append(word)
+
+    return long_words_list  # Return the list
 
 
 def n_long_words(word_list, n):
