@@ -154,8 +154,12 @@ def smallest_int(number_list):
         True
 
     """
-
-    return 100
+    number_list.sort()  # Sort elements in input list in-place with the sort method.
+    if number_list == []:  # If input list is an empty list, return None.
+        return None
+    else:
+        smallest_integer = number_list[0]  # Bind identifier to the first element in the list, which is now the smallest integer in input list.
+        return smallest_integer
 
 
 def largest_int(number_list):
