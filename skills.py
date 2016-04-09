@@ -15,7 +15,8 @@ def print_list(my_list):
         9
 
     """
-    for item in my_list:  # Iterate through the input list and print each item
+    # Iterate through the input list and print each item
+    for item in my_list:
         print item
 
 
@@ -29,8 +30,13 @@ def all_odd(number_list):
         []
 
     """
+    odd_nums = []  # Create an empty list that will be used to store all odd numbers
 
-    return ['the wrong thing']
+    for num in number_list:
+        if num % 2 != 0:  # num % 2 == 0 is true for all even numbers. If num % 2 is not 0 then the number must be odd.
+            odd_nums.append(num)  # Append all numbers to list that meet the condition on line 36.
+
+    return odd_nums
 
 
 def all_even(number_list):
