@@ -341,10 +341,10 @@ def join_strings_with_comma(list_of_words):
 
 
 def foods_in_common(foods1, foods2):
-    """Using ANY Python data structure presented in the last week, given 2 lists of foods, 
+    """Using ANY Python data structure presented in the last week, given 2 lists of foods,
     return a set of items that are in common between the two. (Don't include any duplicates
     in the output collection.)
-    
+
     For example:
 
     >>> foods_in_common(["cheese", "bagel", "cake"], ["hummus", "beets", "bagel", "lentils"])
@@ -356,8 +356,9 @@ def foods_in_common(foods1, foods2):
     set([])
 
     """
+    in_common_foods_set = set(foods1) & set(foods2)  # Convert both arguments to sets and find the intersection of both sets.
 
-    return set(['the wrong thing'])
+    return in_common_foods_set
 
 
 def reverse_list(my_list):
