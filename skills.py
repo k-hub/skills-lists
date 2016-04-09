@@ -287,7 +287,7 @@ def join_strings(word_list):
         ''
 
     """
-    join_words = ''  # Bind identifier to empty string.
+    join_words = ""  # Bind identifier to empty string.
 
     for word in word_list:
         join_words += word  # Concatenate string to join_words.
@@ -326,8 +326,18 @@ def join_strings_with_comma(list_of_words):
         'Pretzel'
 
     """
+    new_word = ""  # Bind identifier to empty string.
 
-    return ""
+    for word in list_of_words:
+        if len(list_of_words) == 1:  # If the length of the input list is 1, then print word as a string.
+            new_word = word
+        else:
+            if word == list_of_words[-1]:  # If the word is the last element in list, then add word to new_word.
+                new_word += word
+            else:
+                new_word += word + ", "  # Add each word to new_word followed by a comma and a space.
+
+    return new_word
 
 
 def foods_in_common(foods1, foods2):
