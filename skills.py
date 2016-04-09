@@ -154,11 +154,11 @@ def smallest_int(number_list):
         True
 
     """
-    number_list.sort()  # Sort elements in input list in-place with the sort method.
+    number_list.sort()  # Sort elements in input list in-place using the sort method.
     if number_list == []:  # If input list is an empty list, return None.
         return None
     else:
-        smallest_integer = number_list[0]  # Bind identifier to the first element in the list, which is now the smallest integer in input list.
+        smallest_integer = number_list[0]  # Bind identifier to the first element in the list, which will be the smallest integer in input list.
         return smallest_integer
 
 
@@ -179,8 +179,12 @@ def largest_int(number_list):
         True
 
     """
-
-    return 0
+    number_list.sort()  # Sort elements in input list in-place using the sort method.
+    if number_list == []:  # If input list is an empty list, return None.
+        return None
+    else:
+        largest_integer = number_list[-1]  # Bind identifier to the last element of input list, which will be the largest integer in input list.
+        return largest_integer
 
 
 def halvesies(number_list):
