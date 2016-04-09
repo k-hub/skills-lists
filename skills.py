@@ -304,8 +304,13 @@ def average(number_list):
     There is no defined answer if the list given is empty. It's fine if
     this raises an error when given an empty list.
     """
+    sum_total = 0  # Bind identifier to 0.
 
-    return 0
+    for num in number_list:
+        sum_total += num  # Get the sum of all numbers from input list
+        avrg = float(sum_total)/len(number_list)  # Divide the float sum of the numbers by length of the list to get average.
+
+    return avrg
 
 
 def join_strings_with_comma(list_of_words):
