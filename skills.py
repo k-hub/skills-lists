@@ -199,8 +199,13 @@ def halvesies(number_list):
         [0.5, 2.5]
 
     """
+    halves_list = []  # Create an empty list that will store halved integers from input list.
 
-    return []
+    for num in number_list:
+        halved_num = float(num)/2  # Bind identifier to expression to get halved float value of integer from input list.
+        halves_list.append(halved_num)  # Append halved integer to list.
+
+    return halves_list
 
 
 def word_lengths(word_list):
