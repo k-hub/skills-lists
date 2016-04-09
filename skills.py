@@ -69,8 +69,10 @@ def every_other_item(my_list):
        ['you', 'are', 'good', 'at', 'coding']
 
     """
+    every_other_item_list = my_list[::2]  # Slice input list from start index to last index and give back every other number then bind resulting list to an identifier.
 
-    return ['the wrong thing']
+    return every_other_item_list
+
 
 def print_indexes(my_list):
     """Print the index of each item in the input_list, followed by the item itself.
