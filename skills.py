@@ -380,17 +380,16 @@ def reverse_list(my_list):
 
 def reverse_list_in_place(my_list):
     """Return the inputted list reversed--WITHOUT creating a new list.
-       This will involve moving the items in my_list to different positions 
+       This will involve moving the items in my_list to different positions
        in the same list.
 
-       Do not use the python methed reverse()/reversed()
+       Do not use the python method reverse()/reversed()
 
         >>> reverse_list([1, 2, 3])
         [3, 2, 1]
 
         >>> reverse_list(["cookies", "love", "I"])
         ['I', 'love', 'cookies']
-
 
     """
 
@@ -399,17 +398,25 @@ def reverse_list_in_place(my_list):
 
 def duplicates(my_list):
     """Return a list of words which are duplicated in the input list.
+    The returned list should be in ascending order.
 
     >>> duplicates(["apple", "apple", "banana", "cherry", "banana", "apple"])
     ['apple', 'banana']
 
     >>> duplicates([1, 2, 2, 4, 4, 4, 7])
-    [4, 2]
-    
+    [2, 4]
 
     """
+    unique_list = []  # Create an empty list to store only unique items.
+    duplicate_set = set()  # Create an empty set to store duplicate items found in input list.
 
-    return []
+    for item in my_list:
+        if item in unique_list:  # If item in unique_list, add item to duplicate_set.
+            duplicate_set.add(item)
+        else:
+            unique_list.append(item)  # Append any items not found in unique_list to unique_list.
+
+    return list(duplicate_set)  # Convert set to list and return list of all duplicate items.
 
 
 def find_letter_indices(list_of_words, letter):
@@ -428,8 +435,17 @@ def find_letter_indices(list_of_words, letter):
     [0, 1, 2, None]
 
     """
+    index = -1  # The index value of the first element in a list is 0, therefore identifier is set to -1.
+    index_list = []  # Create an empty list to store index values of the first occurance of the letter.
 
-    return []
+    for word in list_of_words:
+        if letter in word:  # If letter found in a word in input list, then increment index and append to list.
+            index += 1
+            index_list.append(index)
+        else:
+            index_list.append(None)  # Otherwise, append None if letter not found in word.
+
+    return index_list
 
 def largest_n_items(input_list, n):
     """Given a list of integers along with an integer n, return a 
