@@ -436,7 +436,7 @@ def find_letter_indices(list_of_words, letter):
 
     """
     index = -1  # The index value of the first element in a list is 0, therefore identifier is set to -1.
-    index_list = []  # Create an empty list to store index values of the first occurance of the letter.
+    index_list = []  # Create an empty list to store integers corresponding to the first occurance of the letter.
 
     for word in list_of_words:
         if letter in word:  # If letter found in a word in input list, then increment index and append to list.
@@ -447,11 +447,12 @@ def find_letter_indices(list_of_words, letter):
 
     return index_list
 
-def largest_n_items(input_list, n):
-    """Given a list of integers along with an integer n, return a 
-    list of the largest n numbers in the input list in ascending order. 
 
-    You can assume that n will be less than the length of the list. 
+def largest_n_items(input_list, n):
+    """Given a list of integers along with an integer n, return a
+    list of the largest n numbers in the input list in ascending order.
+
+    You can assume that n will be less than the length of the list.
 
     For example:
 
@@ -459,8 +460,18 @@ def largest_n_items(input_list, n):
     [59, 700, 6006]
 
     """
+    largest_n_items_list = []  # Create an empty list to store largest n integers.
 
-    return []
+    input_list.sort()  # Sort input list by ascending order.
+
+    for num in input_list:
+        if len(largest_n_items_list) == n:
+            break
+        else:
+            largest_n_items_list.append(input_list.pop())  # Pop last item in input list and append to largest_n_items_list.
+            largest_n_items_list.sort()  # Sort list.
+
+    return largest_n_items_list
 
 
 ##############################################################################
