@@ -385,15 +385,20 @@ def reverse_list_in_place(my_list):
 
        Do not use the python method reverse()/reversed()
 
-        >>> reverse_list([1, 2, 3])
+        >>> reverse_list_in_place([1, 2, 3])
         [3, 2, 1]
 
-        >>> reverse_list(["cookies", "love", "I"])
+        >>> reverse_list_in_place(["cookies", "love", "I"])
         ['I', 'love', 'cookies']
 
     """
+    i = 0  # Initialize identifier to 0.
+    for item in my_list:
+        last_item = my_list.pop()  # Pop last element of input list and bind to an identifier.
+        my_list.insert(i, last_item)  # Insert popped item to index i.
+        i += 1  # Increment value and bind to i for each iteration.
 
-    return []
+    return my_list
 
 
 def duplicates(my_list):
